@@ -14,6 +14,10 @@ class User < ApplicationRecord
     participated_groups.include?(group)
   end
 
+  def is_writer_of?(post)
+    posts.include?(post)
+  end
+
   def join!(group)
     participated_groups << group
   end
