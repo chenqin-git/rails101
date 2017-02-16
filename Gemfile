@@ -1,5 +1,5 @@
 source 'https://gems.ruby-china.org'
-ruby "2.2.2"
+#ruby "2.2.2"
 gem 'rack'
 
 git_source(:github) do |repo_name|
