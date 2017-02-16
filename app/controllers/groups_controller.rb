@@ -81,7 +81,7 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
 
     if current_user != @group.user
-      redirect_to root_path, alert: "You have no permission."
+      redirect_to root_path, alert: "拥有者才可以编辑修改"
     end
   end
 end
