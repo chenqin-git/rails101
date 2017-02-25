@@ -21,13 +21,12 @@ test:
   database: db/test.sqlite3
 
 production:
-  adapter: mysql2
-  encoding: utf8
-  host: <%= ENV['MYSQL_HOST'] %>
-  port: <%= ENV['MYSQL_PORT'] %>
-  database: rails101
-  username: <%= ENV['MYSQL_USER'] %>
-  password: <%= ENV['MYSQL_PASS'] %>
+  <<: *default
+  database: rails102
   pool: 5
+  host: <%= ENV['POSTGRESQL_HOST'] %>
+  port: <%= ENV['POSTGRESQL_PORT'] %>
+  username: <%= ENV['POSTGRESQL_USER'] %>
+  password: <%= ENV['POSTGRESQL_PASS'] %>
 #  <<: *default
 #  database: db/production.sqlite3
